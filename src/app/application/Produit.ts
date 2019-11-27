@@ -1,5 +1,6 @@
 export class Produit
-{
+{ private _id:number;
+  private _libelle:string;
     public get libelle(): string {
         return this._libelle;
     }
@@ -12,7 +13,9 @@ export class Produit
     public set id(value: number) {
         this._id = value;
     }
-    constructor(private _id: number, private _libelle: string)
+    constructor(private i: number, private l: string)
     {    
+        this._libelle=l;
+        this._id=i;
     }
 }

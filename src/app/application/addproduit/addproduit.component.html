@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<div class="form-group">
+    <label for="libelle">Libellé du produit</label>
+    <input type="text" id="libelle" [(ngModel)]="libelle" name="lib" class="form-control" required>
+   <label for="libelle">identifiant du produit</label>
+    <input type="text" id="identifiant" name="id" #id="ngModel" [(ngModel)]="identifiant" class="form-control" required>
+    </div>
+    <div *ngIf="id.invalid " class="alert alert-danger">L'identifiant doit être un nombre</div>
+    <button type="submit" [disabled]="f.invalid">enregistrer</button>
+    <div [hidden] ="!submitted" >{{message2}}</div>
+    <button type="reset">vider</button>
+</form>

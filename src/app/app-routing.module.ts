@@ -7,6 +7,7 @@ import { ContactComponent } from './application/contact/contact.component';
 import { ProduitsComponent } from './application/produits/produits.component';
 import { ErrorComponent } from './application/error/error.component';
 import { ProduitComponent } from './application/produit/produit.component';
+import { AddproduitComponent } from './application/addproduit/addproduit.component';
 
 
 
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path:'contact', component:ContactComponent},   
   {path:'produits', component:ProduitsComponent},
   {path:'produits/:id', component:ProduitComponent},
+    {path:'addproduit', component:AddproduitComponent},
+
   {path:'', redirectTo:'accueil', pathMatch:'full'},
   {path:'**', component:ErrorComponent}
 ];
